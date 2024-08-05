@@ -71,7 +71,7 @@ class session_helpers {
 
         // Get updates from cmi5player.
         // This is sessioninfo from CMI5 player.
-        $sessioninfo = $getsessioninfo($sessionid, $cmi5id);
+        $sessioninfo = json_decode($getsessioninfo($sessionid, $cmi5id));
 
         // Update session.
         foreach ($sessioninfo as $key => $value) {
